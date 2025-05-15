@@ -1,0 +1,24 @@
+{
+  "name": "11_javascript",
+  "version": "1.0.0",
+  "description": "practice javascript",
+  "main": "practice.js",
+  "scripts": {
+    "test": "jest",
+    "w": "prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamPerezBeltran/practiceJavascript.git"
+  },
+  "author": "William Pérez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamPerezBeltran/practiceJavascript/issues"
+  },
+  "homepage": "https://github.com/WilliamPerezBeltran/practiceJavascript#readme",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "prettier": "2.2.1"
+  }
+}

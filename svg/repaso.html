@@ -1,0 +1,218 @@
+<html>
+<svg>
+    <defs>
+        <g>
+            <rect x="100" y="100" width="100" height="100" />
+            <circle cx="100" cy="100" r="100" />
+        </g>
+    </defs>
+</svg>	
+</html>	
+
+-------------------------------------------------------------------------------------------------------------------
+use de uses:  ===> coge la base y la reutiliza con el use
+es este caso la base es circle y la utiliza con use con href 
+<html>
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <circle id="myCircle" cx="5" cy="5" r="3" stroke="blue"/>
+  <use href="#myCircle" x="5" fill="blue"/>
+  <use href="#myCircle" x="10" fill="white" stroke="red"/>
+  <use href="#myCircle" x="15" fill="yellow" stroke="red"/>
+  <!--
+stroke="red" will be ignored here, as stroke was already set on myCircle. 
+Most attributes (except for x, y, width, height and (xlink:)href)
+do not override those set in the ancestor.
+That's why the circles have different x positions, but the same stroke value.
+  -->
+</svg>
+</html>	
+-------------------------------------------------------------------------------------------------------------------
+The <defs> element is used to store graphical objects that will be used at a later time. Objects created inside a <defs> element are not rendered directly. To display them you have to reference them (with a <use> element for example).
+
+Graphical objects can be referenced from anywhere, however, defining these objects inside of a <defs> element promotes understandability of the SVG content and is beneficial to the overall accessibility of the document.
+
+	se usa referenciandolo 
+	para utilizar lo que esta dentro del defs toca llamarlo
+	y la forma de llamarlo es refenciandolo con <use>
+
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Some graphical objects to use -->
+  <defs>
+    <circle id="myCircle" cx="0" cy="0" r="5" />
+
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="20%" stop-color="gold" />
+      <stop offset="90%" stop-color="red" />
+    </linearGradient>
+  </defs>
+ 
+  <!-- using my graphical objects -->
+  <use x="5" y="5" xlink:href="#myCircle" fill="url('#myGradient')" />
+</svg>
+
+
+
+<svg height="100" width="100">
+	<defs>
+		<circle id="myCircle" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+	</defs>
+	<use x="5" y="5" xlink:href="#myCircle" fill="url('#myGradient')" />
+</svg>
+-------------------------------------------------------------------------------------------------------------------
+The <g> SVG element is a container used to group other SVG elements.
+
+Transformations applied to the <g> element are performed on its child elements, and its attributes are inherited by its children. It can also group multiple elements to be referenced later with the <use> element.
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Using g to inherit presentation attributes -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+
+-------------------------------------------------------------------------------------------------------------------
+The <clipPath> SVG element defines a clipping path, to be used used by the clip-path property.
+
+A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.
+
+<svg viewBox="0 0 100 100">
+  <clipPath id="myClip">
+    <!--
+      Everything outside the circle will be
+      clipped and therefore invisible.
+    -->
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
+ 
+  <!-- The original black heart, for reference -->
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+ 
+  <!--
+    Only the portion of the red heart
+    inside the clip circle is visible.
+  -->
+  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+</svg>
+-------------------------------------------------------------------------------------------------------------------
+The <g> SVG element is a container used to group other SVG elements.
+
+Transformations applied to the <g> element are performed on its child elements, and its attributes are inherited by its children. It can also group multiple elements to be referenced later with the <use> element.
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Using g to inherit presentation attributes -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+http://tutorials.jenkov.com/svg/g-element.html
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+<svg width="500" height="500" style="stroke:red"  >
+
+	   <rect x="50" y="50" width="50" height="50" />
+        <circle cx="50" cy="50" r="50" />
+  <defs>
+    <g id="shape">
+        <rect x="100" y="100" width="50" height="50" />
+        <circle cx="100" cy="100" r="50" />
+    </g>
+  </defs>
+
+  <use xlink:href="#shape" x="100" y="100" />
+
+</svg>
+
+
+
+
+<svg width="500" height="110">
+
+    <g id="shape2">
+        <rect x="0" y="0" width="50" height="50" />
+    </g>
+
+    <use xlink:href="#shape2" x="200" y="50" />
+
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="cut-off-bottom">
+      <rect x="0" y="0" width="200" height="50"  />
+    </clipPath>
+  </defs>
+
+  <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" fill="red"/>
+</svg>
+
+
+
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <rect x="0" y="0" width="200" height="100" fill="red" />
+
+  <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" />
+</svg>
+</svg>
+
+<svg width="500" height="110">
+
+  <g id="shape3">
+      <rect x="0" y="0" width="50" height="50" style="fill: red;"/>
+  </g>
+
+  <use xlink:href="#shape3" x="100" y="50" style="fill: #00ff00;"/>
+  <use xlink:href="#shape3" x="200" y="50" style="stroke: #00ff00; fill: none;"/>
+
+</svg>
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="cut-off-bottom">
+      <rect x="0" y="0" width="200" height="50"  />
+    </clipPath>
+  </defs>
+
+  <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" fill="red"/>
+</svg>
+
+
+
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <rect x="0" y="0" width="200" height="100" fill="red" />
+
+  <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" />
+</svg>
+
+
+

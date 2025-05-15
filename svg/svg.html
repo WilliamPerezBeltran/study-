@@ -1,0 +1,101 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/svg.css">
+  <title>svg💪</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class='diagram-set-container'>
+
+    <svg width="700" height="700" xmlns='http://www.w3.org/2000/svg'>
+<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+   <circle cx="150" cy="50" r="40" stroke="none" stroke-width="2" fill="white" />
+
+      <defs>
+        <circle 
+        id='circle_left'
+        cx="200" 
+        cy="200" 
+        r="100"
+        stroke="black" 
+        stroke-width="3"  
+        />
+
+        <circle 
+        id='circle_right'
+        cx="300" 
+        cy="200" 
+        r="100"
+        stroke="black" 
+        stroke-width="3"  
+        />
+
+        <clipPath id='mask_left'>
+          <use xlinkHref='#circle_right' />
+        </clipPath>
+      </defs>
+
+      <g>
+
+        <use
+        xlink:href='#circle_left'
+        fill='red'
+        class='circle'
+        clipPath='url(#mask_left)'
+        />
+        <use
+        xlink:href='#circle_right'
+        fill='none'
+        class='circle'
+        />
+      </g>
+    </svg>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="javascript/javascript-general.js"></script>
+</body>
+
+</html>

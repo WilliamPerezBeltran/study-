@@ -1,0 +1,15 @@
+crud = eseses
+Search Results
+Featured snippet from the web
+create, read, update and delete
+The acronym CRUD refers to all of the major functions that are implemented in relational database applications - create, read, update and delete.
+
+
+# CRUD
+
+# c = create
+# r = read
+# u = update
+# d = delete
+
+ 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my website</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<style>
+		:root {
+			--penguin-belly:pink;
+		}
+		.red-box {
+
+			background: red;
+			background: var(--penguin-belly, red);
+			height: 200px;
+			width:200px;
+		}
+	</style>
+	<div class="red-box"></div>
+
+	<div style="border:1px solid black;width: 500px; height: 600px">
+		<h2>theory</h2>	
+		<section>
+			When you create a variable, it is available for you to use inside the selector in which you create it. It also is available in any of that selector's descendants. This happens because CSS variables are inherited, just like ordinary properties.
+		</section>
+		<br>
+		<section>
+			To make use of inheritance, CSS variables are often defined in the :root element.
+		</section>
+		<br>
+		<section>
+			<b>:root</b> is a pseudo-class selector that matches the root element of the document, usually the <b>html</b> element. By creating your variables in <b>:root</b> , they will be available globally and can be accessed from any other selector in the style sheet.
+		</section>
+		<br>
+		<section>
+			Define a variable named --penguin-belly in the :root selector and give it the value of pink. You can then see that the variable is inherited and that all the child elements which use it get pink backgrounds.
+		</section>
+		<br>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my website</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<style>
+		.big-box{
+			--box-green:green;
+		}
+		.small-box{
+			border:2px solid red;
+			width: 100px;
+			height: 100px;
+		}
+		.variable-color{
+			background: var(--box-green, pink);
+		}
+		body {
+			background:#c6faf1;
+		}
+
+	</style>
+	<div class="big-box">
+		<div class="small-box variable-color"></div>
+	</div>
+
+</body>
+</html>

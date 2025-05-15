@@ -1,0 +1,69 @@
+
+
+.diagram-set-container {
+	/*background: blue;*/
+  display: flex;
+  margin-bottom: 1rem;
+  border:1px solid blue;
+  width: 700px;
+  height: 700px;
+}
+
+.diagram-set-container svg {
+  position: absolute;
+}
+
+.circle {
+  transition: all 0.3s ease-in-out;
+}
+
+.circunference {
+  stroke-width: 1;
+  stroke: #011627;
+  transition: all 0.3s ease-in-out;
+}
+
+.diagram-set {
+  border-radius: 50%;
+  color: #011627;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.diagram-set:last-child {
+  clip-path: circle();
+}
+
+.diagram-set span {
+  hyphens: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.diagram-intersection {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(66.66% at -50% 50%);
+  mix-blend-mode: darken;
+}
+
+.diagram-intersection-elements {
+  hyphens: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.diagram-set-universe {
+  hyphens: auto;
+  line-height: 1.25;
+  max-width: 100%;
+  word-wrap: break-word;
+}
