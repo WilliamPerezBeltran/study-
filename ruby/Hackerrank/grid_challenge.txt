@@ -1,0 +1,6 @@
+Pasos:
+	1. Recorro la matriz por cada fila guardando el primer elemento que va ser el punto de comparacion, lo llamaremos ref 
+	2. En la segunda iteración comparo el elemento con la variable ref para determinar si está en ascendente o descendente  
+		(element.ord < ref.ord) => me va determinar su comportamiento descendente o ascendente
+	3.  si element.ord < ref.ord es verdadero, retorna NO 
+	4. Recorro la matriz por cada columna y repito el paso 2 y 3

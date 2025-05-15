@@ -1,0 +1,37 @@
+1. Escribir los números pares de 1 al 100 y agregar cada numero dentro de un array.
+Imprimir los numeros y al final imprimir el array de los numeros pares de 1 al 100
+
+2. Escribir los números inpares de 1 al 100
+Imprimir los números y al final imprimir el array de los numeros impares de 1 al 100
+
+3. Escribir los numeros impares de 1 a n (n entra por linea de comando)
+   Si n es mayor que 20 la ejecución del algoritmo debe terminar
+
+4. Diseñe un algoritmo que permita calcular la cantidad de números
+   pares y la suma de los impares contenidos en un conjunto de n números
+   enteros positivos cualesquiera.
+
+5. Generar la tabla de multiplicar que el usuario desee.
+ejemplo:
+4 * 0  = 0
+4 * 1  = 4
+4 * 2  = 8 
+4 * 3  = 12
+4 * 4  = 16 
+4 * 5  = 20 
+4 * 6  = 24
+4 * 7  = 28
+4 * 8  = 32
+4 * 9  = 36
+4 * 10 = 40
+
+6. Generar una secuencia de números enteros como la que se muestra en el ejemplo.
+
+ejemplo 1: Valor entero suministrado por el usuario: 4
+
+1 4 4 9 9 9    n=3
+1 4 4 9 9 9 16 16 16 16 
+
+ejemplo 2: Valor entero suministrado por el usuario: 6
+
+1 4 4 9 9 9 16 16 16 16 25 25 25 25 25 36 36 36 36 36 36  

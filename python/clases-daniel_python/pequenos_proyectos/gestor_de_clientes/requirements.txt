@@ -1,0 +1,3 @@
+python 2.7 
+sql 2.4
+react.js 4
