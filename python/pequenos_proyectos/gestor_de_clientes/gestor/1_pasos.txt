@@ -1,3 +1,0 @@
-- consultar un único cliente
-ingresa un dni y este buscan el dni y devuleve en caso que se encuentre
-
