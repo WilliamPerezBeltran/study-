@@ -1,9 +1,0 @@
-http://docs.scipy.org/doc/numpy/reference/generated/numpy.log2.html
-http://wiki.scipy.org/Numpy_Example_List
-https://en.wikibooks.org/wiki/Non-Programmer's_Tutorial_for_Python_3/Hello,_World
-https://en.wikibooks.org/wiki/Non-Programmer's_Tutorial_for_Python_3/Who_Goes_There%3F
-https://en.wikibooks.org/wiki/Python_Programming/Basic_Math
-https://en.wikibooks.org/wiki/Python_Programming/Variables_and_Strings
-https://en.wikibooks.org/wiki/Python_Programming/Variables_and_Strings#Combining_Numbers_and_Strings
-https://ocw.mit.edu
-https://ocw.mit.edu/terms
