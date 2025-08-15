@@ -1,6 +1,6 @@
 import random 
 from collections import Counter
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ exercise 1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 # 1. Create a dictionary with 5 countries and their capitals.
 # 2. Add a new country.
 # 3. Update the capital of an existing country.
@@ -78,6 +78,8 @@ print(count_("mmaakkssddadsf"))
 
 print("~~~~~~~ method_2~~~~~~~")
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ exercise 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+# 1. Create a dictionary with 5 countries and their capitals.
 # 3. List comprehension
 # Create a list with the squares of even numbers from 1 to 20
 def even_squares_number():
@@ -100,11 +102,14 @@ print(even_squares_number_map())
 
 
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ exercise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 # ~~~~~~~~~~ 4. Dictionary comprehension ~~~~~~~~~~
 # Create a dictionary with numbers 1 to 5 as keys and their cubes as values
 def cubes():
     return  {x: x**3 for x in range(1,6)}
 print(cubes())
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ exercise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+# ~~~~~~~~~~ 4. Dictionary comprehension ~~~~~~~~~~
 # ~~~~~~~~~~ 5. map and filter
 # Use map to convert all names in a list to uppercase
 # Use filter to keep only names with more than 5 letters
@@ -137,29 +142,63 @@ print(random_())
 
 def random__():
     return [tuple(random.randint(0,10)) for x in range(30)]
-        
-def unique_random_():
-    w = list()
-    for x in [tuple(random.randint(0,10)) for x in range(30)]:
-        if x not in w:
-            w.append(x)
-
 
      
 print(random_())
-print(unique_random_())
 
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ exercise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+# ~~~~~~~~~~ 4. Dictionary comprehension ~~~~~~~~~~
 #8. ~~~~~~~~~~ Slicing ~~~~~~~~~~
 # From the string "abcdefghijklmnopqrstuvwxyz":
 #   - Extract only the vowels using slicing
 #   - Reverse the string using slicing
+
+#   - Extract only the vowels using slicing
+print("-------")
+abc = "abcdefghijklmnopqrstuvwxyz"
+arr = list()
+for index,value in enumerate(abc):
+    if value == "a" or value == "e" or value == "i" or value == "o" or value == "u":
+        arr.append(value)
+str_arr = "".join(arr)
+print(str_arr)
+
+print("-------")
+abc = "abcdefghijklmnopqrstuvwxyz"
+arr = list()
+for index,value in enumerate(abc):
+    if value in "aeiou":
+        arr.append(value)
+str_arr = "".join(arr)
+print(str_arr)
+
+
+print("-------")
+abc = "abcdefghijklmnopqrstuvwxyz"
+arr_index_vowel = list()
+for index,value in enumerate(abc):
+    if value in "aeiou":
+       arr_index_vowel.append(index)
+my_dict = dict()
+for x in arr_index_vowel:
+    my_dict[x] = abc[x:x+1]
+print(my_dict)
+
+#   - Reverse the string using slicing
+string_reversed = abc[::-1]
+print(string_reversed)
+print(abc)
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ exercise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 #9. ~~~~~~~~~~ Built-in modules ~~~~~~~~~~
 # Use the math module to:
 #   - Calculate the square root of 144
 #   - Calculate the sine of 90 degrees
 
-
+import math 
+math.sin(90)
+int(math.sqrt(144))
+print(dir(math))
 
 
 
