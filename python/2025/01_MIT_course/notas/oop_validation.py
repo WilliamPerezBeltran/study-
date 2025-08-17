@@ -35,3 +35,8 @@ print(p1.get_balance())
 p1.withdraw(100)
 print(p1.get_balance())
 
+
+
+Validar entradas en __init__, deposit, y withdraw
+
+usar isinstance para asegurarnos de que los tipos son correctos y que los valores sean válidos.
