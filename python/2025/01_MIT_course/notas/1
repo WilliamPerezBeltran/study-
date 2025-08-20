@@ -1,4 +1,0 @@
-# the most basic example is for 
-
-for x in range(2):
-	print(x)
