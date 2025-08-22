@@ -1,0 +1,37 @@
+
+Métodos de solución de los números primos:
+	- Fuerza bruta (trial division)
+	- Criba de Eratóstenes (Sieve of Eratosthenes)
+	- Pruebas probabilísticas
+	- Prueba de Fermat
+	- Prueba de Miller-Rabin
+	- Prueba de Solovay-Strassen
+	- Pruebas determinísticas especializadas
+	- Test AKS
+	- Tablas de primos pequeños
+
+
+	# Método de Fuerza Bruta para Números Primos
+
+## Idea principal
+
+Un número `n` es primo si **no tiene divisores aparte de 1 y él mismo**.
+
+## Para comprobarlo
+
+1. Se revisan todos los enteros `d` desde 2 hasta `n-1` (o más eficiente, hasta `sqrt(n)`).
+2. Si algún `d` divide exactamente a `n` (`n % d == 0`), entonces `n` **no es primo**.
+3. Si ningún `d` divide a `n`, entonces `n` **es primo**.
+
+> Nota: La optimización de solo revisar hasta `sqrt(n)` se debe a que si `n` tiene un divisor mayor que su raíz cuadrada, necesariamente tiene uno menor que la raíz cuadrada.
+
+ejemplo:
+n = 5
+se revisa desde 2 hasta 5-1 (uno por uno) 
+siendo d => 2,3,4
+if existe un d que cumpla n%d == 0 => n no es primo 
+if no hay un d que cumpla n%d == 0 => es primo   
+5%2 = 1 → no divide
+5%3 = 2 → no divide
+5%4 = 1 → no divide
+esto quiere decir que 5 es primo kll
