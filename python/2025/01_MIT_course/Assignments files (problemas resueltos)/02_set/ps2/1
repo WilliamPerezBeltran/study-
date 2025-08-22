@@ -1,8 +1,8 @@
 # Problem Set 2, hangman.py
 # Name: 
 # Collaborators:
-# Time spent
-:
+# Time spent:
+
 # Hangman Game
 # -----------------------------------
 # Helper code
@@ -115,41 +115,18 @@ def hangman(secret_word):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    
-    while True:
-        if len(secret_word) > 6:
-            choose_word(wordlist)
-        break 
-    
-    print(f"====> {secret_word}")
     print(f"The secret word contains {len(secret_word)}") 
     print(f"You have 6 guesses ")
     guess = 0
     copy_secret_word = copy.copy(secret_word)
-    letter_to_guess = len(secret_word)
-    while guess < 6:
-        print("")
-        print("")
+    while True:
         
+        value = input(f"this is your {guess} time to figeout the secrete word, please give me a letter")
         guess += 1 
-        print(f"{guess} guesses ")
-        print(f"{letter_to_guess} has not yet guessed")
-        value = input(f"Please give me a letter: ")
-        if value not in copy_secret_word:
-            print("FAIL")
-
-        if value in copy_secret_word:
-            if copy_secret_word == "":
-                print("         WINNER          ")
-                print("         WINNER          ")
-                print(f"The secret word is : {secret_word}")
-                print("         WINNER          ")
-                print("         WINNER          ")
-            copy_secret_word = copy_secret_word.replace(value,"-",1)
-            letter_to_guess -= 1
-            print("llevas hasta el momento adivinado ")
-            print(f"-- {copy_secret_word} --")
-        
+        print(guess)
+        if value in secret_word:
+            pass
+            
         
         if guess == 6:
             print("Game over")
