@@ -2,7 +2,6 @@
 # Name: 
 # Collaborators:
 # Time spent
-:
 # Hangman Game
 # -----------------------------------
 # Helper code
@@ -115,50 +114,48 @@ def hangman(secret_word):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    
-    while True:
-        if len(secret_word) > 6:
-            choose_word(wordlist)
-        break 
-    
-    print(f"====> {secret_word}")
-    print(f"The secret word contains {len(secret_word)}") 
-    print(f"You have 6 guesses ")
-    guess = 0
-    copy_secret_word = copy.copy(secret_word)
-    letter_to_guess = len(secret_word)
-    while guess < 6:
-        print("")
-        print("")
-        
-        guess += 1 
-        print(f"{guess} guesses ")
-        print(f"{letter_to_guess} has not yet guessed")
-        value = input(f"Please give me a letter: ")
-        if value not in copy_secret_word:
-            print("FAIL")
+    guess = 6
+    print("Welcome to hangman")
+    print(f"the word has {len(secret_word)} letters")
+    print("\n \n\n\n")
 
-        if value in copy_secret_word:
-            if copy_secret_word == "":
-                print("         WINNER          ")
-                print("         WINNER          ")
-                print(f"The secret word is : {secret_word}")
-                print("         WINNER          ")
-                print("         WINNER          ")
-            copy_secret_word = copy_secret_word.replace(value,"-",1)
-            letter_to_guess -= 1
-            print("llevas hasta el momento adivinado ")
-            print(f"-- {copy_secret_word} --")
+    #display = "".join(["_" for x in secret_word])
+    #display = "".join(["_" for x in secret_word])
+    display = ["_" for x in secret_word]
+    print(f"word: {''.join(display)}")
+    print("\n \n\n\n")
+
+
+    while guess > 0:
+        value = input("Ingrese la letra: ").lower()
+        if value in secret_word:
+            print("Correcto")
+            for index, x in enumerate(secret_word):
+                if value == x:
+                    display[index] = value
+
+        else:
+            guess -= 1
+            print("Incorrecto")
         
-        
-        if guess == 6:
-            print("Game over")
+        print(f"Te quedan {guess} intentos")
+        print("\n \n\n\n")
+        print(f"word: {''.join(display)}")
+
+        if "".join(display) == secret_word:
+            print("\n \n\n\n")
+            print(f"WINNER")
+            print(f"Has ganado la palabra es: {secret_word}") 
+            print("\n \n\n\n")
             break
 
 
 
-        #if value in secret_word:
-         #   else:
+
+
+
+
+    
 
 
 
