@@ -45,6 +45,9 @@ def prime_number(n):
     return  not 0 in array_of_residuos 
 
 
+def prime_number_(n):
+    return  not 0 in [n%x for x in range(2,n)]
+
     
 
 """
@@ -54,6 +57,15 @@ grades = {"Ana": 85, "Luis": 90, "Pedro": 78}
 # Expected output: "Luis"
 
 """
+def highest_grade(grades): 
+    masimo = max([x[1] for x in grades.items()])
+    result = None  
+    for nombre, nota in grades.items():
+        if masimo == nota:
+            return nombre 
+
+def highest_grade_(grades):
+        return max(grades,key=grades.get)
 
 """
 Implement a function that receives a list of strings and returns the longest word.
@@ -65,8 +77,7 @@ Example: ["python", "java", "javascript"] → "javascript"
 Implement a decorator in Python that measures the execution time of a function.
 
 """
-"""
-Write a generator that produces the first n numbers of the Fibonacci sequence.
+""" Write a generator that produces the first n numbers of the Fibonacci sequence.
 """
 
 """
