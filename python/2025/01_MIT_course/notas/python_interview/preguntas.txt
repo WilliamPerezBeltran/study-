@@ -1,0 +1,332 @@
+https://pythonjournals.com/top-30-python-interview-questions-and-answers-2025
+/
+
+Top 30 Python Interview Questions and Answers (2025)
+Tarun kumar
+Tarun kumar 
+Python Developer |Django & Django Rest Framework | FastApi | JWT | SQL | AWS EC2
+
+
+July 9, 2025
+In this blog, I’ll share 30+ real-world Python interview questions and answers — carefully curated from actual company interviews, including those from startups and top tech firms.
+
+Whether you’re just starting out or preparing for your next big opportunity, these questions will help you build confidence, sharpen your problem-solving skills, and stand out in competitive hiring rounds.
+
+Moreover, they are tailored to match what companies are asking in 2025, making this a practical and up-to-date resource for your next Python coding interview.
+
+I’ve included beginner to advanced Python concepts, covering OOP, data structures, algorithms, and Python libraries commonly asked about by recruiters. If you find this helpful, comment below—I’ll post an advanced Python Q&A series next!
+
+1. What is the Difference Between a List and a Tuple?
+List is mutable and can be changed after creation.
+Tuple is immutable and cannot be changed after creation.
+
+l = [1, 2, 3]   # list
+
+t = (1, 2, 3)   # tuple
+
+2. Difference Between List Comprehension and Dict Comprehension
+List comprehension is a concise and elegant way to create lists in Python. It provides a compact syntax for generating lists by applying an expression to each item in an iterable object.
+Dict comprehension is a concise way to create dictionaries in Python. It follows a similar syntax to list comprehensions but produces dictionaries instead.
+
+# List
+
+squares = [x*x for x in range(5)]
+
+ 
+
+# Dict
+
+square_dict = {x: x*x for x in range(5)}
+
+3. What is a Lambda Function in Python?
+A Lambda function in Python is a small, anonymous function that can have any number of arguments but can only have one expression. It’s a concise way to create simple functions without using the def keyword.
+
+add = lambda a, b: a + b
+
+4. Examples of Mutable and Immutable Datatypes in Python
+Mutable: list, dict, set
+Immutable: int, float, str, tuple
+
+Basic Difference:
+
+# Value equality with ==
+
+a = [1, 2, 3]
+
+b = [1, 2, 3]
+
+print(a == b)  # True - same values
+
+print(a is b)  # False - different objects
+
+c = a
+
+print(a is c)  # True - same object
+
+print(a == c)  # True - same values
+
+5. What is the Difference Between is and ==?
+is: checks identity (same memory)
+==: checks equality (same value)
+
+a = [1, 2]
+
+b = a
+
+c = [1, 2]
+
+a is b  # True
+
+a == c  # True
+
+a is c  # False
+
+6. How Are Variables and Objects Stored in Python?
+In Python, variables and objects are stored using a combination of namespaces and memory management through references.
+
+A variable is just a name (label) that refers to an object in memory.
+Python variables do not store the actual data but reference objects stored elsewhere in memory.
+
+Objects → Stored in Heap Memory Variables (Names) → Stored in Stack Memory
+
+7. What is a Decorator in Python?
+A function that modifies another function without changing its structure.
+
+def decorator(func):
+
+ def wrapper():
+
+ print("Before function")
+
+ func()
+
+ print("After function")
+
+ return wrapper
+
+ 
+
+@decorator
+
+def greet():
+
+ print("Hello")
+
+ 
+
+greet()
+
+8. Difference Between Generators and Iterators
+Iterators are objects that implement the __iter__() and __next__() Methods to iterate over a sequence of values.
+Generators are a type of iterator created using functions and the yield keyword to produce values one at a time, lazily.
+
+def gen():
+
+ yield 1
+
+ yield 2
+
+9. Difference Between Pickling and Unpickling?
+Pickling is the process of converting a Python object into a byte stream for storage or transmission.
+Unpickling is the process of converting a byte stream back into the original Python object.
+
+import pickle
+
+data = pickle.dumps({'a': 1})
+
+obj = pickle.loads(data)
+
+10. Difference Between Shallow Copy and Deep Copy
+Shallow Copy: Creates a new object but inserts references to the objects found in the original. Changes to nested objects affect both the original and the copy.
+Deep Copy: Creates a new object and recursively copies all nested objects. Changes to the copy do not affect the original, and vice versa – they are completely independent.
+
+import copy
+
+copy.copy(obj)   # shallow
+
+copy.deepcopy(obj)  # deep
+
+11. Multiprocessing vs Multithreading in Python
+Multiprocessing: Creates separate processes, each with its own memory space and Python interpreter. Processes run independently and can truly execute in parallel, bypassing Python’s GIL (Global Interpreter Lock). Communication between processes requires special mechanisms like pipes or queues.
+Multithreading: Creates multiple threads within a single process that share the same memory space. Due to Python’s GIL, only one thread can execute Python code at a time, making it suitable for I/O-bound tasks but not CPU-bound tasks. Threads can share data directly but require synchronization to avoid race conditions.
+
+12. How is Memory Managed in Python?
+Memory management in Python is handled by the Python memory manager, which includes a private heap, automatic garbage collection, and dynamic memory allocation using reference counting and a cyclic garbage collector.
+
+13. What is the Garbage Collector in Python?
+The garbage collector in Python is a built-in mechanism that automatically frees up memory by reclaiming objects that are no longer in use, primarily using reference counting and cyclic garbage collection.
+
+14. What is GIL (Global Interpreter Lock)?
+A mutex that allows only one thread to execute Python bytecode at a time, preventing race conditions in CPython.
+
+15. What is a First-Class Function in Python?
+First-Class Function: In Python, functions are first-class objects, meaning they can be treated like any other data type. They can be:
+
+Assigned to variables
+Passed as arguments to other functions
+Returned from functions
+Stored in data structures (lists, dictionaries, etc.)
+Created at runtime
+
+This allows for powerful programming patterns like higher-order functions, decorators, and functional programming techniques. Functions have the same privileges as other objects in Python.
+
+16. What is a Closure in Python?
+Closure: A closure is a function that captures and retains access to variables from its outer (enclosing) scope, even after the outer function has finished executing. The inner function “closes over” these variables, keeping them alive in memory.
+
+def outer_function(message):
+
+ def inner_function():
+
+ print(f"Message: {message}")
+
+ return inner_function
+
+ 
+
+# Create a closure
+
+my_closure = outer_function("Hello from closure!")
+
+ 
+
+# Call the inner function
+
+my_closure()
+
+Key characteristics:
+
+Inner function references variables from the outer function’s scope
+Outer function returns the inner function
+Variables from the outer scope remain accessible to the inner function
+Each closure maintains its copy of the captured variables
+
+This enables data encapsulation and creates functions with persistent local state.
+
+17. Different Ways to Read/Write a File in Python
+# Read
+
+with open('file.txt', 'r') as f:
+
+ data = f.read()
+
+ 
+
+# Write
+
+with open('file.txt', 'w') as f:
+
+ f.write("Hello")
+
+18. What is a Context Manager in Python?
+Context Manager: An object that defines methods to be used with Python’s with statement. It ensures proper resource management by automatically handling setup and cleanup operations, even if an exception occurs.
+
+Key Methods:
+
+__enter__() Called when entering the with Block performs setup operations
+__exit__() Called when exiting the with block performs cleanup operations (guaranteed to execute even if an exception occurs)
+
+Purpose: Provides a clean way to manage resources like files, database connections, or locks by ensuring they are properly acquired and released, preventing resource leaks and ensuring cleanup code always runs.
+
+19. Types of Inheritance in Python
+Single
+Multiple
+Multilevel
+Hierarchical
+Hybrid
+
+20. Difference Between Abstraction and Encapsulation
+Abstraction: The process of hiding complex implementation details and showing only the essential features of an object. It focuses on what an object does rather than how it does it. Achieved through abstract classes, interfaces, and methods that provide a simplified view of functionality.
+
+Encapsulation: The bundling of data (attributes) and methods that operate on that data within a single unit (class), while restricting direct access to internal components. It focuses on hiding the internal state and requiring interaction through well-defined interfaces using access modifiers (private, protected, public).
+
+Key Difference: Abstraction simplifies complexity by hiding unnecessary details, while encapsulation protects data integrity by controlling access to internal components.
+
+21. What is Polymorphism in Python?
+Polymorphism: The ability of different objects to respond to the same interface or method call in their specific way. It allows objects of different types to be treated uniformly while exhibiting different behaviors based on their type.
+
+Key Characteristics:
+
+The same method name can behave differently for different classes
+Enables writing flexible, reusable code that works with multiple types
+Achieved through method overriding in inheritance or duck typing
+Allows objects to be used interchangeably if they implement the same interface
+
+Types in Python:
+
+Runtime Polymorphism: Method overriding in inheritance
+Duck Typing: “If it walks like a duck and quacks like a duck, it’s a duck” – objects are treated based on their behavior rather than their type
+
+This enables writing generic code that can work with various object types without knowing their specific implementation details.
+
+22. What is Function Overloading?
+Multiple functions with the same name but different parameters (Not natively supported in Python).
+
+23. What is Function Overriding?
+Function Overriding: The ability of a child class to provide a specific implementation of a method that is already defined in its parent class. The child class method replaces (overrides) the parent class method when called on an instance of the child class.
+
+24. Why Doesn’t Python Support Function Overloading?
+Function Overloading: Python doesn’t support traditional function overloading (defining multiple functions with the same name but different parameters) because:
+
+Key Reasons:
+
+Dynamic Typing: Python doesn’t check parameter types at compile time, making it difficult to distinguish between overloaded methods based on parameter types
+Name Binding: In Python, function names are just variable names that reference function objects. Defining a new function with the same name simply rebinds the name to the new function, overwriting the previous one
+Flexible Parameters: Python’s *args, **kwargs and default parameters provide sufficient flexibility to handle multiple parameter combinations in a single function
+Duck Typing Philosophy: Python relies on duck typing rather than strict type-checking
+
+Alternative Approaches:
+
+Use default parameters
+Use *args and **kwargs
+
+25. Reverse a String in Python
+s = "Python"
+
+print(s[::-1])
+
+26. Separate Domain and Name from List of Emails
+emails = ["john@example.com", "dev@example.com"]
+
+for e in emails:
+
+ name, domain = e.split("@")
+
+ print(name, domain)
+
+27. Sort an Array Without Built-in Sort
+arr = [5, 3, 1, 2]
+
+for i in range(len(arr)):
+
+ for j in range(i+1, len(arr)):
+
+ if arr[i] > arr[j]:
+
+ arr[i], arr[j] = arr[j], arr[i]
+
+28. Factorial Program in Python
+This program is most commonly asking questions
+
+def fact(n):
+
+ return 1 if n == 0 else n * fact(n - 1)
+
+29. Find the nth Fibonacci Number
+def fib(n):
+
+ if n <= 1:
+
+ return n
+
+ return fib(n-1) + fib(n-2)
+
+30. What are Python’s Built-in Data Types?
+Numeric: int, float, complex
+Sequence: list, tuple, range
+Text: str
+Set: set, frozenset
+Mapping: dict
+Boolean: bool
+Binary: bytes, bytearray, memoryview
+
+full blog https://pythonjournals.com/top-30-python-interview-questions-and-answers-2025/

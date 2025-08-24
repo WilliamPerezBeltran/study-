@@ -1,0 +1,67 @@
+En un artículo sobre LinkedIn titulado “Top 30 Python Interview Questions and Answers (2025)”, algunas preguntas destacadas incluyen:
+
+¿Cuál es la diferencia entre listas y tuplas?
+
+¿Qué es una lambda function?
+
+¿Cuál es la diferencia entre is y ==?
+
+¿Qué es un decorador?
+
+Diferencias entre generadores e iteradores 
+LinkedIn
+
+
+
+
+
+
+
+Preguntas comunes en entrevistas de Python (varios recursos)
+
+Según blogs y artículos especializados, algunas preguntas usuales incluyen:
+
+¿Qué son los yield y qué hacen?
+
+Explica copia superficial vs copia profunda.
+
+Gestión de memoria en Python.
+
+Variables de clase vs variables de instancia; globales vs locales.
+
+Eliminación de archivos, serialización/deserialización (pickle).
+
+range vs xrange (aunque xrange es de Python 2).
+
+Paquetes, módulos, PEP 8, libraries como NumPy, Django, Flask.
+
+
+
+
+
+
+
+
+
+Otros temas frecuentes:
+
+POO: encapsulación, herencia, métodos especiales.
+
+Comprensiones de listas, manejo de excepciones, GIL, decoradores, generadores, contexto con with, testing unitario, concurrencia (asyncio, multiprocessing, threading)
+Hireline
+Medium
+CodigoNautas
+.i
+
+
+Experiencias reales desde Reddit
+
+En foros como Reddit, se comparten casos reales que aportan contexto:
+
+Alguien en una entrevista para Python/ML comentó: “Te pediría… cargar un JSON con Pandas, mostrar resumen estadístico, sanear datos, graficar con Matplotlib, luego buscar el k-ésimo elemento más grande o chico (quick select) y quizás una regresión lineal con scikit-learn.” También mencionan temas básicos como scoping de variables, decoradores, context managers, GIL, broadcasting/vectorización con NumPy
+Reddit
+.
+
+Otro compartió: “Live coding, preguntas técnicas, entregar código en un tiempo limitado” como dinámicas frecuentes en entrevistas, especialmente para roles junior
+Reddit
+.
