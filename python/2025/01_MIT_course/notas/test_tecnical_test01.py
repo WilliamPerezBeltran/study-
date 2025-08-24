@@ -4,7 +4,10 @@ from tecnical_test01 import(
             reverse, reverse_, reverse__,
             prime_number,
             highest_grade,
-            highest_grade_
+            highest_grade_,
+            longest,
+            longest_,
+            even_numers
         )
 class Test01TecnicalTest(unittest.TestCase):
 
@@ -36,10 +39,19 @@ class Test01TecnicalTest(unittest.TestCase):
         self.assertEqual(prime_number(662), False)
         self.assertEqual(prime_number(673), True)
 
+
     def test_highest_grade(self):
         self.assertEqual(highest_grade({"Ana": 85, "Luis": 90, "Pedro": 78}), "Luis")
         self.assertEqual(highest_grade_({"Ana": 85, "Luis": 90, "Pedro": 78}), "Luis")
+        
+    def longest(self):
+        self.assertEqual(longest(["python", "java", "javascript"]), "javascript")
  
+    def longest(self):
+        self.assertEqual(longest_(["python", "java", "javascript"]), "javascript")
+    def even_numers(self):
+        self.assertEqual(even_numers(),185794560)
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -1,4 +1,4 @@
-
+import time 
 """
 Write a function that reverses a string.
 Example: "python" → "nohtyp"
@@ -72,18 +72,48 @@ Implement a function that receives a list of strings and returns the longest wor
 Example: ["python", "java", "javascript"] → "javascript"
 
 """
+def longest(a):
+    masimo = 0 
+    word = ""
+    for i,x in enumerate(a):
+        if len(x) > masimo:
+            masimo = len(x)
+            word =  a[i]
+    return word
+ 
+def longest_(a):
+    return max(a, key=len)
+ 
 
 """
 Implement a decorator in Python that measures the execution time of a function.
 
 """
+def mi_decorator(func):
+    def wraper():
+        inicio = time.time()
+        funcion = func() 
+        final = time.time()
+        print(f"Tiempo de ejecucion: {final-inicio} segundos ")
+
 """ Write a generator that produces the first n numbers of the Fibonacci sequence.
 """
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+#como usarlo 
+for num in fibonacci(10):
+    print(num, end=" ")
 
 """
 Using functional programming (map, filter, and reduce), calculate the product of all even numbers in a list.
 
 """
+def even_numers():
+    reduce(lambda x, y: x*y,list(filter(lambda x: x%2 == 0,[x for x in range(1,20)])),1)
 """
 Part 4: Bonus (Optional)
 
