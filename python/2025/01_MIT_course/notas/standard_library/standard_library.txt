@@ -1,0 +1,22 @@
+
+https://en.wikibooks.org/wiki/Python_Programming
+
+
+The Python Standard Library is a collection of script modules accessible to a Python
+program to simplify the programming process and removing the need to rewrite commonly 
+used commands. They can be used by 'calling/importing' them at the beginning of a script.
+
+A list of the Standard Library modules can be found at http://www.python.org/doc/.
+
+The following are among the most important:
+
+- time
+- sys
+- os
+- math
+- random
+- pickle
+- urllib
+- re
+- cgi
+- socket
