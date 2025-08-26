@@ -1,0 +1,46 @@
+Pasos rápidos:
+
+Verifica que tienes un gestor de plugins en Vim
+Los más usados son:
+
+vim-plug
+
+Vundle
+
+Pathogen
+
+Ejemplo si usas vim-plug (lo más fácil):
+En tu ~/.vimrc agrega:
+
+call plug#begin('~/.vim/plugged')
+Plug 'davidhalter/jedi-vim'
+call plug#end()
+
+
+Instala el plugin
+Abre Vim y corre:
+
+:PlugInstall
+
+
+Reinicia Vim y prueba
+Abre un archivo .py, escribe algo como:
+
+my_list = []
+my_list.
+
+
+Luego presiona <C-Space> o <Tab> y deberías ver las sugerencias.
+
+⚡ Nota:
+
+pip3 install jedi era necesario, pero también necesitas el plugin jedi-vim.
+
+Si no quieres gestor de plugins, puedes clonar el repo directamente:
+
+git clone https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+
+
+y agregar esto a tu ~/.vimrc:
+
+set rtp+=~/.vim/bundle/jedi-vim

@@ -28,12 +28,6 @@ The following are among the most important:
 
 1. Operating system & file management
 
-	os         sys
-	pathlib    shutil
-	glob       tempfile
-	fileinput  fnmatch
-	stat       errno
-
 	os 
 	sys 
 	pathlib 
