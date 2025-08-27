@@ -1,8 +1,5 @@
 import unittest 
-from linked_list00 import (
-        Node, 
-        SinglyLinkedList
-    )
+from lista_ import  SinglyLinkedList
 
 class TestLinkedList00(unittest.TestCase):
     def test_empty(self):
@@ -13,6 +10,14 @@ class TestLinkedList00(unittest.TestCase):
         lista = SinglyLinkedList()
         lista.insert_at_beginning(1)
         self.assertEqual(lista.is_empty(), False)
+    def test_insert_at_beginning(self):
+        lista = SinglyLinkedList()
+        lista.insert_at_beginning(0)
+        lista.insert_at_beginning(1)
+
+        self.assertEqual(lista.head.data, 1)
+        self.assertEqual(lista.head.data.next, 1)
+        self.assertEqual(lista.head.data.next.next, None)
     
      
 

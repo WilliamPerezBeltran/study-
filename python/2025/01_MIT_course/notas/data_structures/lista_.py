@@ -1,4 +1,3 @@
-
 class Node():
     def __init__(self,data):
         self.data = data 
@@ -33,18 +32,3 @@ class SinglyLinkedList():
     
     def is_empty(self):
         return self.head == None
-
-
-
-
-lista = SinglyLinkedList()
-lista.insert_at_beginning(3)
-lista.insert_at_beginning(2)
-lista.insert_at_beginning(1)
-lista.insert_at_end(4)
-lista.traverse()
-print(lista.is_empty())
-
-
-lista1 = SinglyLinkedList()
-print(lista1.is_empty())

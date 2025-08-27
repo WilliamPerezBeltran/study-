@@ -1,0 +1,36 @@
+import unittest 
+from lista_ import  SinglyLinkedList
+
+class TestLinkedList00(unittest.TestCase):
+    def test_empty(self):
+        my_lista = SinglyLinkedList()
+        self.assertEqual(my_lista.is_empty(),True)
+
+    def test_no_empty(self):
+        lista = SinglyLinkedList()
+        lista.insert_at_beginning(1)
+        self.assertEqual(lista.is_empty(), False)
+    
+    def test_insert_at_beginning(self):
+        lista = SinglyLinkedList()
+        lista.insert_at_beginning(0)
+        lista.insert_at_beginning(1)
+        self.assertEqual(lista.head.data, 1)
+        self.assertEqual(lista.head.next.data, 0)
+    
+    def test_insert_at_end(self):
+        lista = SinglyLinkedList()
+        lista.insert_at_beginning(0)
+        lista.insert_at_beginning(1)
+        self.assertEqual(lista.head.next.data, 0)
+    
+    
+     
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+
+
